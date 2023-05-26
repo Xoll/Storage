@@ -377,7 +377,7 @@ Function Install-O2016STD([String] $MSPURL){
 	Write-Host "Downloading MS Office"
 		Enable-SSL
 		New-Item -ItemType Directory -Force -Path 'C:\IT\O2016STD'
-		(New-Object System.Net.WebClient).DownloadFile(<#Bundle up your O2016 installer to a password protected self extracting file and upload it somewhere#>, 'C:\IT\O2016STD\O2016_STD_X64.exe')
+		(New-Object System.Net.WebClient).DownloadFile('D:\Office365', 'C:\IT\O2016STD\O2016_STD_X64.exe')
 
 	Write-Host "Downloading MS Office config files"
 		$MSPfilename = $MSPURL.Substring($MSPURL.LastIndexOf("/") + 1)
